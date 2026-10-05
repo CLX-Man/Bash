@@ -1,11 +1,18 @@
 #!/bin/bash -e
 
-name=Clemens
+#anfang vom programm
 
-echo $name
+name=Clemens
+massage=Hello
+massage2=here\ are\ spaces\ lol
+
+text="Headline
+more.
+more.
+more."
+
+echo $massage $name
+echo $massage2
+echo "$text"
 
 echo "Hello World" > ./hello-World.txt
-
-chmod a+r ./hello-World.txt
-chmod a-w  ./hello-World.txt
-chmod a-x  ./hello-World.txt
