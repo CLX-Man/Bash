@@ -16,3 +16,5 @@ echo $massage2
 echo "$text"
 
 echo "Hello World" > ./hello-World.txt
+read -p "Name:" name
+echo $name
