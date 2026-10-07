@@ -37,5 +37,8 @@ fi
 echo $docType set
 
 echo >> latex.tex "
-"
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{hyperref}"
 
