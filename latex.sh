@@ -40,23 +40,23 @@ fi
 echo $docType set
 
 echo >> "$docName.tex" "
-\\usepackage[ngerman]{babel}
-\\usepackage[T1]{fontenc}
-\\usepackage{lmodern}
-\\usepackage{hyperref}"
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{hyperref}"
 
 # set Titel
 read -p "Titel: " titel
 echo "
-\\title{$titel}" >> "$docName.tex" 
+\title{$titel}" >> "$docName.tex" 
 
 # set Author
 read -p "Author: " author
-echo "\\author{$author}" >> "$docName.tex"
+echo "\author{$author}" >> "$docName.tex"
 
 echo "
-\\begin{Document}
+\begin{Document}
 
-\\end{Document}" >> "$docName.tex"
+\end{Document}" >> $docName".tex"
 
 echo "LaTeX umgebung erstellt"
