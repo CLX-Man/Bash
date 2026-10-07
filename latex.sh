@@ -4,7 +4,7 @@ echo "LaTeX umgebung wird erstellt"
 
 # erstellen vom der Tex datei
 read -p "Document name:" docName
-touch $docName".tex"
+touch "$docName.tex"
 
 
 # setting the Document type
@@ -14,32 +14,32 @@ Type: " docType
 
 if [ $docType = article ]
     then
-        echo '\documentclass{article}' >> $docName".tex"
+        echo '\documentclass{article}' >> "$docName.tex"
 elif [ $docType = report ]
     then
-        echo '\documentclass{report}' >> $docName".tex"
+        echo '\documentclass{report}' >> "$docName.tex"
 elif [ $docType = book ] 
     then
-        echo '\documentclass{book}' >> $docName".tex"
+        echo '\documentclass{book}' >> "$docName.tex"
 elif [ $docType = beamer ]
     then
-        echo '\documentclass{beamer}' >> $docName".tex"
+        echo '\documentclass{beamer}' >> "$docName.tex"
 elif [ $docType = standalone ]
     then
-        echo '\documentclass{standalone}' >> $docName".tex"
+        echo '\documentclass{standalone}' >> "$docName.tex"
 elif [ $docType = moderncv ]
     then
-        echo '\documentclass{moderncv}' >> $docName".tex"
+        echo '\documentclass{moderncv}' >> "$docName.tex"
 elif [ $docType = letter ]
     then
-        echo '\documentclass{letter}' >> $docName".tex"
+        echo '\documentclass{letter}' >> "$docName.tex"
 else
     echo "invalid Type"
     exit 1
 fi
 echo $docType set
 
-echo >> $docName".tex" "
+echo >> "$docName.tex" "
 \usepackage[ngerman]{babel}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
@@ -48,15 +48,15 @@ echo >> $docName".tex" "
 # set Titel
 read -p "Titel: " titel
 echo "
-\title{$titel}" >> $docName".tex" 
+\title{$titel}" >> "$docName.tex" 
 
 # set Author
 read -p "Author: " author
-echo "\author{$author}" >> $docName".tex"
+echo "\author{$author}" >> "$docName.tex"
 
 echo "
 \begin{Document}
 
-\end{Document}" >> $docName".tex"
+\end{Document}" >> "$docName.tex"
 
 echo "LaTeX umgebung erstellt"
