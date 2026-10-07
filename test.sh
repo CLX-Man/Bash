@@ -17,4 +17,4 @@
 
 
 read -p "Name:" name
-echo "Hallo $name" >> "test.tex"
+echo "Hallo $name" > "test.tex"
