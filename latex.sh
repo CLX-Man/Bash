@@ -4,7 +4,7 @@ echo "LaTeX umgebung wird erstellt"
 
 # erstellen vom der Tex datei
 read -p "Document name:" docName
-touch "latex.tex"
+touch $docName".tex"
 
 
 # setting the Document type
@@ -42,3 +42,18 @@ echo >> latex.tex "
 \usepackage{lmodern}
 \usepackage{hyperref}"
 
+# set Titel
+read -p "Titel: " titel
+echo "
+\title{$titel}" >> latex.tex 
+
+# set Author
+read -p "Author: " author
+echo "\author{$author}" >> latex.tex
+
+echo "
+\begin{Document}
+
+\end{Document}" >> latex.tex
+
+echo "LaTeX umgebung erstellt"
