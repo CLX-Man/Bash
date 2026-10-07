@@ -10,4 +10,4 @@ test.sh:
 	./test.sh
 
 clean:
-	rm test.tex latex.tex
+	rm *.tex

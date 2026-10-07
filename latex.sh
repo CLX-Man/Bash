@@ -14,29 +14,32 @@ Type: " docType
 
 if [ $docType = article ]
     then
-        echo '\documentclass{article}' >> latex.tex
+        echo '\documentclass{article}' >> $docName".tex"
 elif [ $docType = report ]
     then
-        echo '\documentclass{report}' >> latex.tex
+        echo '\documentclass{report}' >> $docName".tex"
 elif [ $docType = book ] 
     then
-        echo '\documentclass{book}' >> latex.tex
+        echo '\documentclass{book}' >> $docName".tex"
 elif [ $docType = beamer ]
     then
-        echo '\documentclass{beamer}' >> latex.tex
+        echo '\documentclass{beamer}' >> $docName".tex"
 elif [ $docType = standalone ]
     then
-        echo '\documentclass{standalone}' >> latex.tex
+        echo '\documentclass{standalone}' >> $docName".tex"
 elif [ $docType = moderncv ]
     then
-        echo '\documentclass{moderncv}' >> latex.tex
+        echo '\documentclass{moderncv}' >> $docName".tex"
+elif [ $docType = letter ]
+    then
+        echo '\documentclass{letter}' >> $docName".tex"
 else
     echo "invalid Type"
     exit 1
 fi
 echo $docType set
 
-echo >> latex.tex "
+echo >> $docName".tex" "
 \usepackage[ngerman]{babel}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
@@ -45,15 +48,15 @@ echo >> latex.tex "
 # set Titel
 read -p "Titel: " titel
 echo "
-\title{$titel}" >> latex.tex 
+\title{$titel}" >> $docName".tex" 
 
 # set Author
 read -p "Author: " author
-echo "\author{$author}" >> latex.tex
+echo "\author{$author}" >> $docName".tex"
 
 echo "
 \begin{Document}
 
-\end{Document}" >> latex.tex
+\end{Document}" >> $docName".tex"
 
 echo "LaTeX umgebung erstellt"

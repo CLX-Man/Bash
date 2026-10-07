@@ -1,4 +1,4 @@
-latex
-article
-Hallo
+VL1
+letter
+Vorlesung 1
 Clemens Eberwien
