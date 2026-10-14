@@ -57,6 +57,6 @@ echo "\author{$author}" >> "$docName.tex"
 echo "
 \begin{Document}
 
-\end{Document}" >> $docName".tex"
+\end{Document}" >> "$docName.tex"
 
 echo "LaTeX umgebung erstellt"
