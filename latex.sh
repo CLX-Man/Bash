@@ -55,8 +55,8 @@ read -p "Author: " author
 echo "\author{$author}" >> "$docName.tex"
 
 echo "
-\begin{Document}
+\begin{document}
 
-\end{Document}" >> "$docName.tex"
+\end{document}" >> "$docName.tex"
 
 echo "LaTeX umgebung erstellt"
